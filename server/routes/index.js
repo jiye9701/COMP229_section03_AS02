@@ -21,5 +21,20 @@ router.get('/about', indexController.DisplayAboutPage);
 /* GET Contact page. */
 router.get('/contact', indexController.DisplayContactPage);
 
+/* GET Display the Login page. */
+router.get('/login', indexController.DisplayLoginPage);
+
+/* GET Process the Login page. */
+router.post('/login', indexController.ProcessLoginPage);
+
+/* GET Display the Register page. */
+router.get('/register', indexController.DisplayRegisterPage);
+
+/* GET Process the Login page. */
+router.post('/register', indexController.ProcessRegisterPage);
+
+/* GET Perform Logout */
+router.get('/logout', indexController.PerformLogout);
+
 
 module.exports = router;

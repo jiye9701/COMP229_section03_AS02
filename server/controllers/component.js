@@ -20,7 +20,8 @@ module.exports.DisplayComponentList = (req, res, next) => {
   }
 
 module.exports.DisplayAddPage = (req, res, next)=> {
-    res.render('index', { title: 'Add Component' });
+    res.render('index', { title: 'Add Component',
+    displayName: req.user ? req.user.displayName : '' });
 }
 
 module.exports.ProcessAddPage = (req, res, next)=> {
@@ -54,7 +55,9 @@ module.exports.DisplayEditPage = (req, res, next)=> {
             res.end(err);
         }
         // show the edit view
-        res.render('index', { title: 'Edit Component', data: ComponentToEdit });
+        res.render('index', 
+        { title: 'Edit Component', data: ComponentToEdit,
+        displayName: req.user ? req.user.displayName : '' });
     });
 }
 

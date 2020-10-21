@@ -27,4 +27,4 @@ let UserSchema = Schema({
 UserSchema.plugin(passportLocalMongoose);
 
 
-module.exports.User = Model('Component', UserSchema);
+module.exports.User = Model('User', UserSchema);
