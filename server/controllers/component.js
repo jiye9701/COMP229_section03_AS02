@@ -14,7 +14,8 @@ module.exports.DisplayComponentList = (req, res, next) => {
         res.end()
       }
   
-      res.render('index', { title: 'Component List', components: data });
+      res.render('index', { title: 'Component List', components: data,
+      displayName: req.user ? req.user.displayName : ''  });
     });
     
   }
