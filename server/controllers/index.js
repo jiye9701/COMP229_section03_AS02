@@ -11,27 +11,27 @@ module.exports.DisplayHomePage = (req, res, next) => {
 
     console.log("Home Page Controller");
 
-    res.render('index', { title: 'Home',
+    res.render('home', { title: 'Home',
     displayName: req.user ? req.user.displayName : '' });
   }
   
 module.exports.DisplayProductsPage = (req, res, next) => {
-    res.render('index', { title: 'Products',
+    res.render('projects', { title: 'Projects',
     displayName: req.user ? req.user.displayName : '' });
   }
 
 module.exports.DisplayServicesPage = (req, res, next) => {
-    res.render('index', { title: 'Services',
+    res.render('services', { title: 'Services', message: 'We are offering:',
     displayName: req.user ? req.user.displayName : '' });
   }
 
 module.exports.DisplayAboutPage = (req, res, next) => {
-    res.render('index', { title: 'About',
+    res.render('about', { title: 'About Me',
     displayName: req.user ? req.user.displayName : '' });
   }
   
 module.exports.DisplayContactPage = (req, res, next) => {
-    res.render('index', { title: 'Contact',
+    res.render('contact', { title: 'Contact', message: 'Contact Me',
     displayName: req.user ? req.user.displayName : '' });
   }
 
@@ -59,7 +59,7 @@ module.exports.DisplayContactPage = (req, res, next) => {
         return next(err);
       }
 
-      // is there login errors?
+      // error
       if(!user)
       {
         req.flash('loginMessage', 'Authentication Error');

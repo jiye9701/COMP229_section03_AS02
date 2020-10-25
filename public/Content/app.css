@@ -1,4 +1,21 @@
 body
 {
+  background-color: #DAEAEB;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     margin-bottom: 60px;
 }
+
+
+
+h1, h2{
+  text-align: center;
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
+
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+

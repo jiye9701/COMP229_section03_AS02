@@ -1,3 +1,6 @@
+//Created by: Jiye Yu - Student Nr.:301116244 Created on Oct 09, 2020
+//COMP229_assignment1_301116244 Jiye Yu
+
 let express = require('express');
 let router = express.Router();
 
@@ -9,8 +12,8 @@ router.get('/', indexController.DisplayHomePage);
 /* GET home page. */
 router.get('/home', indexController.DisplayHomePage);
 
-/* GET Products page. */
-router.get('/products', indexController.DisplayProductsPage);
+/* GET Projects page. */
+router.get('/projects', indexController.DisplayProductsPage);
 
 /* GET Services page. */
 router.get('/services', indexController.DisplayServicesPage);
