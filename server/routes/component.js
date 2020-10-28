@@ -6,7 +6,7 @@ let passport = require('passport');
 
 let componentController = require('../controllers/component');
 
-// helper function (for authentication guard)
+// helper function for authentication guard
 function requireAuth(req, res, next)
 {
     // check if the user is logged in

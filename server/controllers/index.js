@@ -108,7 +108,7 @@ module.exports.DisplayContactPage = (req, res, next) => {
         console.log('Error: Inserting New User');
         if(err.name == "UserExistsError")
         {
-          req.flash('registerMessage', 'Registration Error');
+          req.flash('registerMessage', 'You are already registrated');
           console.log('Error: User Already Exists');
         }
         return res.redirect('/register');
