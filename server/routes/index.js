@@ -24,6 +24,8 @@ router.get('/about', indexController.DisplayAboutPage);
 /* GET Contact page. */
 router.get('/contact', indexController.DisplayContactPage);
 
+
+
 /* GET Display the Login page. */
 router.get('/login', indexController.DisplayLoginPage);
 

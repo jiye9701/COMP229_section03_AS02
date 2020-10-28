@@ -35,6 +35,11 @@ module.exports.DisplayContactPage = (req, res, next) => {
     displayName: req.user ? req.user.displayName : '' });
   }
 
+  module.exports.DisplayContactPage = (req, res, next) => {
+    res.render('contact', { title: 'Contact', message: 'Contact Me',
+    displayName: req.user ? req.user.displayName : '' });
+  }
+  
   module.exports.DisplayLoginPage = (req, res, next) => {
     // check if the user is already logged in
     if(!req.user)
